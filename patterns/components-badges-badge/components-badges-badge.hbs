@@ -1,0 +1,8 @@
+<span class="badge {{ badgeClass }}">
+  {{ badgeText }}
+  {{#if badgeDismissable }}
+    <a href="#">
+      {{> basics-icon iconFamily="pf-icon" iconName="pf-icon-close" }}
+    </a>
+  {{/if}}
+</span>
