@@ -1,36 +1,33 @@
 <div class="container-fluid">
-
-  <header class="row pf-masthead justify-content-between align-items-stretch">
+  <header class="row pf-masthead justify-content-between align-items-stretch" role="banner">
     <div class="col-auto d-flex pf-masthead__section align-items-stretch">
       <a class="pf-masthead__skip align-items-center d-flex" href="#main">Skip to main content</a>
       <div class="pf-masthead__navicon align-self-center hidden-md-up">
-        <button class="btn btn-link" aria-labelledby="Button">
+        <button class="btn btn-link" aria-label="Site navigation">
           <span class="fa fa-bars"></span>
         </button>
       </div>
       <a class="pf-masthead__brand align-self-center" href="">
-        <img src="/images/logo-alt.svg" />
-        <img src="/images/brand.svg" />
+        <img src="/images/logo-alt.svg" alt="" /><img src="/images/brand.svg" alt="PatternFly Enterprise Application" />
       </a>
     </div>
-
-    <div class="col-auto d-flex align-items-stretch pf-masthead__section hidden-sm-down">
+    <nav class="col-auto d-flex align-items-stretch pf-masthead__section hidden-sm-down" role="navigation" aria-label="Utilities navigation">
       <ul class="nav pf-utilities align-items-stretch">
         <li class="nav-item d-flex align-items-stretch ">
           <a class="nav-link  d-flex align-items-center " href="#">
-                    Status
+                  Status
                 </a>
         </li>
         <li class="nav-item d-flex align-items-stretch ">
           <a class="nav-link  d-flex align-items-center " href="#">
-                    Link
+                  Link
                 </a>
         </li>
-        <li class="nav-item d-flex align-items-stretch show">
+        <li class="nav-item d-flex align-items-stretch dropdown show">
           <a class="nav-link  d-flex align-items-center dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-            <span class="pf-icon pf-icon-user " aria-hidden="true"></span> Brian Johnson
+            <span class="pf-icon pf-icon-user" aria-hidden="true"></span>Brian Johnson
           </a>
-          <div class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown-menu dropdown-menu-right" aria-label="Brian Johnson">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
@@ -39,8 +36,6 @@
           </div>
         </li>
       </ul>
-    </div>
-
+    </nav>
   </header>
-
 </div>
