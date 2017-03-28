@@ -5181,8 +5181,9 @@ limitations under the License.
 
 .btn-link .fa, .btn-link .pf-icon {
   color: #292e34; }
-  .btn-link .fa:focus, .btn-link .fa:active, .btn-link .fa:hover, .btn-link .pf-icon:focus, .btn-link .pf-icon:active, .btn-link .pf-icon:hover {
-    color: #0088ce; }
+
+.btn-link:focus .fa, .btn-link:focus .pf-icon, .btn-link:active .fa, .btn-link:active .pf-icon, .btn-link:hover .fa, .btn-link:hover .pf-icon {
+  color: #0088ce; }
 
 .fade {
   opacity: 0;
@@ -6807,43 +6808,73 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 .pf-masthead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: #030303;
   border-top: 3px solid #39a5dc;
-  color: #d1d1d1; }
+  color: #d1d1d1;
+  min-height: 1rem; }
   @media (min-width: 768px) {
     .pf-masthead {
       padding-left: 15px; } }
 
 .pf-masthead__skip {
-  position: absolute;
-  left: 150%;
-  color: #d1d1d1;
-  font-size: 0.75rem;
-  margin-left: 0.875rem;
-  padding-left: 0.875rem;
-  padding-right: 0.875rem; }
-  .pf-masthead__skip:focus {
-    position: static;
-    order: 99;
-    color: #d1d1d1;
-    background: #292e34; }
+  display: none; }
+  @media (min-width: 992px) {
+    .pf-masthead__skip {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: -999em;
+      color: #d1d1d1;
+      font-size: 0.75rem;
+      margin-left: 0.875rem;
+      padding-left: 0.875rem;
+      padding-right: 0.875rem; }
+      .pf-masthead__skip:focus {
+        position: static;
+        order: 99;
+        color: #d1d1d1;
+        background: #292e34; } }
+
+.pf-masthead__section {
+  display: flex;
+  flex: 0 0 auto; }
+
+.pf-masthead__navicon .btn {
+  min-height: 48px; }
 
 .pf-masthead__navicon .fa {
   color: #d1d1d1; }
 
+@media (min-width: 768px) {
+  .pf-masthead__navicon {
+    display: none; } }
+
 .pf-masthead__brand {
-  padding: 0.4375rem 0; }
+  align-self: center;
+  padding: 0.1875rem 0; }
   .pf-masthead__brand img {
     margin-right: 0.4375rem; }
 
+.pf-masthead__brand__icon {
+  margin: 0.1875rem 0; }
+
+@media (max-width: 767px) {
+  .pf-utilities {
+    display: none; } }
+
 .pf-utilities .nav-item {
+  display: flex;
   border-left: 1px solid #4d5258; }
 
 .pf-utilities .nav-link {
+  display: flex;
+  align-items: center;
   color: #d1d1d1;
   font-size: 0.75rem;
-  padding-left: 0.875rem;
-  padding-right: 0.875rem; }
+  padding: 0 0.875rem; }
   .pf-utilities .nav-link:hover {
     background: #292e34; }
 
